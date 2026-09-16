@@ -4,23 +4,28 @@
 
 > 本仓库仅用于发布安装包，不含源代码。
 
-## 下载
+## 下载安装
 
-前往 [Releases](https://github.com/harry-zhangkai/baiwen/releases) 页面，按平台下载：
+### macOS（Apple Silicon）
 
-| 平台 | 文件 |
-|---|---|
-| macOS（Apple Silicon） | `baiwen-*-mac-arm64.dmg` |
-| macOS（Intel） | `baiwen-*-mac-x64.dmg` |
-| Windows x64 | `baiwen-*-win-x64-setup.exe` |
+终端执行（命令行下载的安装包不带隔离标记，装好直接能开）：
 
-## macOS 安装提示
+```bash
+curl -L -o baiwen.dmg https://github.com/harry-zhangkai/baiwen/releases/download/v0.1.0/baiwen-0.1.0-mac-arm64.dmg
+```
 
-若打开时提示 **「“百问”已损坏，无法打开」**，这是 macOS 对未签名应用的拦截（应用本身没有问题），任选其一：
+下载完成后双击 `baiwen.dmg`，把「百问」拖入「应用程序」即可。
 
-- 终端执行一次：`xattr -cr /Applications/百问.app`，之后正常打开；
-- 或改用命令行下载安装包（这种方式不带隔离标记，装好直接能开）：
+### macOS（Intel）
 
-  ```bash
-  curl -L -o baiwen.dmg https://github.com/harry-zhangkai/baiwen/releases/download/v0.1.0/baiwen-0.1.0-mac-arm64.dmg
-  ```
+```bash
+curl -L -o baiwen.dmg https://github.com/harry-zhangkai/baiwen/releases/download/v0.1.0/baiwen-0.1.0-mac-x64.dmg
+```
+
+安装方式同上。
+
+### Windows x64
+
+下载安装程序：[baiwen-0.1.0-win-x64-setup.exe](https://github.com/harry-zhangkai/baiwen/releases/download/v0.1.0/baiwen-0.1.0-win-x64-setup.exe)
+
+双击运行，按提示选择安装目录，完成安装。
