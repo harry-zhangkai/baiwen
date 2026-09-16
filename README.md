@@ -8,21 +8,17 @@
 
 ### macOS（Apple Silicon）
 
-终端执行（命令行下载的安装包不带隔离标记，装好直接能开）：
+终端粘贴执行（自动下载并安装到「应用程序」，完成后自动打开；命令行下载的安装包不带隔离标记，装好直接能开）：
 
 ```bash
-curl -L -o baiwen.dmg https://github.com/harry-zhangkai/baiwen/releases/download/v0.1.0/baiwen-0.1.0-mac-arm64.dmg
+curl -L -o baiwen.dmg https://github.com/harry-zhangkai/baiwen/releases/download/v0.1.0/baiwen-0.1.0-mac-arm64.dmg && hdiutil attach -nobrowse -quiet baiwen.dmg && rm -rf /Applications/baiwen.app && cp -R /Volumes/baiwen*/baiwen.app /Applications/ && hdiutil detach /Volumes/baiwen* -quiet && rm baiwen.dmg && open /Applications/baiwen.app
 ```
-
-下载完成后双击 `baiwen.dmg`，把「百问」拖入「应用程序」即可。
 
 ### macOS（Intel）
 
 ```bash
-curl -L -o baiwen.dmg https://github.com/harry-zhangkai/baiwen/releases/download/v0.1.0/baiwen-0.1.0-mac-x64.dmg
+curl -L -o baiwen.dmg https://github.com/harry-zhangkai/baiwen/releases/download/v0.1.0/baiwen-0.1.0-mac-x64.dmg && hdiutil attach -nobrowse -quiet baiwen.dmg && rm -rf /Applications/baiwen.app && cp -R /Volumes/baiwen*/baiwen.app /Applications/ && hdiutil detach /Volumes/baiwen* -quiet && rm baiwen.dmg && open /Applications/baiwen.app
 ```
-
-安装方式同上。
 
 ### Windows x64
 
